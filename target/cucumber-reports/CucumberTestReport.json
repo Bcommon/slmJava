@@ -1,49 +1,255 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "line": 7,
-        "name": "Title of your scenario",
-        "description": "",
-        "id": "title-of-your-feature;title-of-your-scenario",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
+        "before": [
           {
             "result": {
-              "duration": 681244,
+              "duration": 1707600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FirstSeleniumPrg.startTest(Scenario)"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "test different webdriver with url",
+        "description": "",
+        "id": "smoke-test-webdriver-in-selenium-bdd-cucumber-java-framework-code;test-different-webdriver-with-url;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3642875013,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FirstSeleniumPrg.closeTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Full webdriver project path : ./src/test/resources/driver/chromedriver.exe"
+            ],
+            "result": {
+              "duration": 2284498,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "\"chromedriver.exe\" available in the project path",
+            "match": {
+              "arguments": [
+                {
+                  "val": "chromedriver.exe",
+                  "offset": 1
+                }
+              ],
+              "location": "FirstSeleniumPrg.checkDriverFile(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4919749621,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "get \"chromedriver.exe\" for test",
+            "match": {
+              "arguments": [
+                {
+                  "val": "chromedriver.exe",
+                  "offset": 5
+                }
+              ],
+              "location": "FirstSeleniumPrg.getDriver(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4104143957,
               "status": "passed"
             },
             "line": 8,
-            "name": "I want to write a step with precondition",
+            "name": "launch driver with \"https://www.google.com/\"",
             "match": {
-              "location": "StepDefinition.precondition()"
+              "arguments": [
+                {
+                  "val": "https://www.google.com/",
+                  "offset": 20
+                }
+              ],
+              "location": "FirstSeleniumPrg.launchURL(String)"
             },
-            "keyword": "Given "
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "CurrentUrl : https://www.google.com/"
+            ],
+            "result": {
+              "duration": 21462395,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "check \"https://www.google.com/\" is launched",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.google.com/",
+                  "offset": 7
+                }
+              ],
+              "location": "FirstSeleniumPrg.checkURL(String)"
+            },
+            "keyword": "When "
           }
         ],
         "tags": [
           {
-            "name": "@tag"
+            "name": "@testFirstSeleniumCode"
           },
           {
-            "name": "@tag1"
+            "name": "@somkeTestDriver"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1099056,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FirstSeleniumPrg.startTest(Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "test different webdriver with url",
+        "description": "",
+        "id": "smoke-test-webdriver-in-selenium-bdd-cucumber-java-framework-code;test-different-webdriver-with-url;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 6080820862,
+              "status": "passed"
+            },
+            "match": {
+              "location": "FirstSeleniumPrg.closeTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "output": [
+              "Full webdriver project path : ./src/test/resources/driver/geckodriver.exe"
+            ],
+            "result": {
+              "duration": 763780,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "\"geckodriver.exe\" available in the project path",
+            "match": {
+              "arguments": [
+                {
+                  "val": "geckodriver.exe",
+                  "offset": 1
+                }
+              ],
+              "location": "FirstSeleniumPrg.checkDriverFile(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6673058871,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "get \"geckodriver.exe\" for test",
+            "match": {
+              "arguments": [
+                {
+                  "val": "geckodriver.exe",
+                  "offset": 5
+                }
+              ],
+              "location": "FirstSeleniumPrg.getDriver(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4902096290,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "launch driver with \"https://convertcase.net/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://convertcase.net/",
+                  "offset": 20
+                }
+              ],
+              "location": "FirstSeleniumPrg.launchURL(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "CurrentUrl : https://convertcase.net/"
+            ],
+            "result": {
+              "duration": 16532036,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "check \"https://convertcase.net/\" is launched",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://convertcase.net/",
+                  "offset": 7
+                }
+              ],
+              "location": "FirstSeleniumPrg.checkURL(String)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@testFirstSeleniumCode"
+          },
+          {
+            "name": "@somkeTestDriver"
           }
         ]
       }
     ],
-    "name": "Title of your feature",
-    "description": "  I want to use this template for my feature file",
-    "id": "title-of-your-feature",
+    "name": "Smoke test webdriver in Selenium BDD cucumber java framework code",
+    "description": "",
+    "id": "smoke-test-webdriver-in-selenium-bdd-cucumber-java-framework-code",
     "keyword": "Feature",
-    "uri": ".\\src\\test\\feature\\bdd\\slm\\java\\webtest\\test.feature",
+    "uri": ".\\src\\test\\feature\\bdd\\slm\\java\\webtest\\FirstSelenium.feature",
     "tags": [
       {
-        "name": "@tag",
+        "name": "@testFirstSeleniumCode",
         "type": "Tag",
         "location": {
-          "line": 2,
+          "line": 1,
           "column": 1
         }
       }

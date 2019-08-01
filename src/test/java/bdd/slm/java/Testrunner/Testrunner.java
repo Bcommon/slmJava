@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/feature/bdd/slm/java/webtest", glue = {
 		"bdd/slm/java/stepDefinition" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
-				"json:target/cucumber-reports/CucumberTestReport.json" }, tags = { "@tag1" })
+				"json:target/cucumber-reports/CucumberTestReport.json" }, tags = { "@somkeTestDriver" })
 
 public class Testrunner {
 
