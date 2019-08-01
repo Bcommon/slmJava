@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1707600,
+              "duration": 1961624,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 3642875013,
+              "duration": 1687013042,
               "status": "passed"
             },
             "match": {
@@ -37,7 +37,7 @@
               "Full webdriver project path : ./src/test/resources/driver/chromedriver.exe"
             ],
             "result": {
-              "duration": 2284498,
+              "duration": 2359764,
               "status": "passed"
             },
             "line": 6,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 4919749621,
+              "duration": 3148986751,
               "status": "passed"
             },
             "line": 7,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 4104143957,
+              "duration": 5968362563,
               "status": "passed"
             },
             "line": 8,
@@ -94,7 +94,7 @@
               "CurrentUrl : https://www.google.com/"
             ],
             "result": {
-              "duration": 21462395,
+              "duration": 371308377,
               "status": "passed"
             },
             "line": 9,
@@ -124,7 +124,7 @@
         "before": [
           {
             "result": {
-              "duration": 1099056,
+              "duration": 243760,
               "status": "passed"
             },
             "match": {
@@ -139,7 +139,7 @@
         "after": [
           {
             "result": {
-              "duration": 6080820862,
+              "duration": 3595816999,
               "status": "passed"
             },
             "match": {
@@ -155,7 +155,7 @@
               "Full webdriver project path : ./src/test/resources/driver/geckodriver.exe"
             ],
             "result": {
-              "duration": 763780,
+              "duration": 627360,
               "status": "passed"
             },
             "line": 6,
@@ -173,7 +173,7 @@
           },
           {
             "result": {
-              "duration": 6673058871,
+              "duration": 5014031147,
               "status": "passed"
             },
             "line": 7,
@@ -191,7 +191,7 @@
           },
           {
             "result": {
-              "duration": 4902096290,
+              "duration": 5497469390,
               "status": "passed"
             },
             "line": 8,
@@ -212,7 +212,7 @@
               "CurrentUrl : https://convertcase.net/"
             ],
             "result": {
-              "duration": 16532036,
+              "duration": 108446101,
               "status": "passed"
             },
             "line": 9,

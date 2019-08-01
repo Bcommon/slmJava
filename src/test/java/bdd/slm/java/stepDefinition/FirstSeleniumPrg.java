@@ -4,13 +4,17 @@ import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import bdd.slm.java.Utils.ApplicationConstants;
+import bdd.slm.java.Utils.ScreenShot;
 import bdd.slm.java.Utils.VariableUtils;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -19,9 +23,9 @@ import cucumber.api.java.en.*;
 
 public class FirstSeleniumPrg {
 
-	public WebDriver driver;
 	File file;
 	VariableUtils vutils = new VariableUtils();
+	ScreenShot screenPrint = new ScreenShot();
 	private Scenario scenario;
 
 	// public WebDriver driverChrome;
@@ -30,6 +34,7 @@ public class FirstSeleniumPrg {
 	public void startTest(Scenario scenario) {
 		System.out.println("================ @Before ================ ");
 		this.scenario = scenario;
+		VariableUtils.screenShotCounter = 0;
 
 	}
 
@@ -54,11 +59,13 @@ public class FirstSeleniumPrg {
 		if ("chromedriver.exe".equalsIgnoreCase(webdriver.trim())) {
 			System.setProperty(ApplicationConstants.CHROME_PROPERTY,
 					ApplicationConstants.DRIVER_PATH + webdriver.trim());
-			driver = new ChromeDriver();
+			VariableUtils.driver = new ChromeDriver();
+			VariableUtils.driverType = "Chrome";
 		} else if ("geckodriver.exe".equalsIgnoreCase(webdriver.trim())) {
 			System.setProperty(ApplicationConstants.FIREFOX_PROPERTY,
 					ApplicationConstants.DRIVER_PATH + webdriver.trim());
-			driver = new FirefoxDriver();
+			VariableUtils.driver = new FirefoxDriver();
+			VariableUtils.driverType = "Firefox";
 		} else {
 			assertTrue(false, "*********** webdriver mismatch ***********");
 		}
@@ -67,24 +74,28 @@ public class FirstSeleniumPrg {
 
 	@Then("^launch driver with \"([^\"]*)\"$")
 	public void launchURL(String url) {
-		driver.get(url);
-		driver.manage().window().maximize();
+		VariableUtils.driver.get(url);
+		VariableUtils.driver.manage().window().maximize();
 	}
 
 	@When("^check \"([^\"]*)\" is launched$")
-	public void checkURL(String url) {
+	public void checkURL(String url) throws IOException, InterruptedException {
 
-		scenario.write("CurrentUrl : " + driver.getCurrentUrl());
+		scenario.write("CurrentUrl : " + VariableUtils.driver.getCurrentUrl());
 
 		vutils.message = "****** URL mismatch ****";
-		assertTrue(vutils.message, driver.getCurrentUrl().trim().equalsIgnoreCase(url));
+		assertTrue(vutils.message, VariableUtils.driver.getCurrentUrl().trim().equalsIgnoreCase(url));
+		screenPrint.takeSnapShot();
 
 	}
 
 	@After
 	public void closeTest() throws InterruptedException {
-		TimeUnit.SECONDS.sleep(3);
-		driver.quit();
+
+		// File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+		TimeUnit.SECONDS.sleep(1);
+		VariableUtils.driver.quit();
 	}
 
 }

@@ -7,5 +7,7 @@ public class ApplicationConstants {
 	public final static String DRIVER_PATH = "./src/test/resources/driver/";
 	public final static String CHROME_PROPERTY ="webdriver.chrome.driver";
 	public final static String FIREFOX_PROPERTY ="webdriver.gecko.driver";
+	public final static String SCREEN_SHOT_PATH ="./src/test/resources/screenShot/";
+	
 
 }
