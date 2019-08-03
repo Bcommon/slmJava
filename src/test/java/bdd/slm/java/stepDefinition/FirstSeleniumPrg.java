@@ -4,14 +4,11 @@ import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import bdd.slm.java.Utils.ApplicationConstants;
 import bdd.slm.java.Utils.ScreenShot;
@@ -19,7 +16,9 @@ import bdd.slm.java.Utils.VariableUtils;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.*;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class FirstSeleniumPrg {
 
@@ -32,7 +31,7 @@ public class FirstSeleniumPrg {
 
 	@Before
 	public void startTest(Scenario scenario) {
-		System.out.println("================ @Before ================ ");
+
 		this.scenario = scenario;
 		VariableUtils.screenShotCounter = 0;
 
@@ -66,6 +65,11 @@ public class FirstSeleniumPrg {
 					ApplicationConstants.DRIVER_PATH + webdriver.trim());
 			VariableUtils.driver = new FirefoxDriver();
 			VariableUtils.driverType = "Firefox";
+		} else if ("msedgedriver.exe".equalsIgnoreCase(webdriver.trim())) {
+			System.setProperty(ApplicationConstants.IE_DRIVER_PATH,
+					ApplicationConstants.DRIVER_PATH + webdriver.trim());
+			VariableUtils.driver = new InternetExplorerDriver();
+			VariableUtils.driverType = "IE";
 		} else {
 			assertTrue(false, "*********** webdriver mismatch ***********");
 		}
@@ -79,7 +83,7 @@ public class FirstSeleniumPrg {
 	}
 
 	@When("^check \"([^\"]*)\" is launched$")
-	public void checkURL(String url) throws IOException, InterruptedException {
+	public void checkURL(String url) throws Exception {
 
 		scenario.write("CurrentUrl : " + VariableUtils.driver.getCurrentUrl());
 
@@ -94,8 +98,10 @@ public class FirstSeleniumPrg {
 
 		// File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		TimeUnit.SECONDS.sleep(1);
-		VariableUtils.driver.quit();
+		if (!(VariableUtils.driver == null)) {
+			TimeUnit.SECONDS.sleep(1);
+			VariableUtils.driver.quit();
+		}
 	}
 
 }

@@ -6,22 +6,31 @@
         "before": [
           {
             "result": {
-              "duration": 1961624,
+              "duration": 2139534,
               "status": "passed"
             },
             "match": {
               "location": "FirstSeleniumPrg.startTest(Scenario)"
             }
+          },
+          {
+            "result": {
+              "duration": 4693035,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.startTest(Scenario)"
+            }
           }
         ],
-        "line": 13,
-        "name": "test different webdriver with url",
+        "line": 12,
+        "name": "run selenium test for google in POM",
         "description": "",
-        "id": "smoke-test-webdriver-in-selenium-bdd-cucumber-java-framework-code;test-different-webdriver-with-url;;2",
+        "id": "selenium-test-using-page-object-model;run-selenium-test-for-google-in-pom;;2",
         "after": [
           {
             "result": {
-              "duration": 1687013042,
+              "duration": 1688954947,
               "status": "passed"
             },
             "match": {
@@ -34,89 +43,79 @@
         "steps": [
           {
             "output": [
-              "Full webdriver project path : ./src/test/resources/driver/chromedriver.exe"
+              "chrome:::  created",
+              "::: navigated url :::\nhttps://www.google.com/"
             ],
             "result": {
-              "duration": 2359764,
+              "duration": 7140110223,
               "status": "passed"
             },
             "line": 6,
-            "name": "\"chromedriver.exe\" available in the project path",
+            "name": "get webdriver for \"chrome\" with \"https://www.google.com/\"",
             "match": {
               "arguments": [
                 {
-                  "val": "chromedriver.exe",
-                  "offset": 1
+                  "val": "chrome",
+                  "offset": 19
+                },
+                {
+                  "val": "https://www.google.com/",
+                  "offset": 33
                 }
               ],
-              "location": "FirstSeleniumPrg.checkDriverFile(String)"
+              "location": "StepDefinition.getWebdriver(String,String)"
             },
             "keyword": "Given "
           },
           {
+            "output": [
+              "::: navigated url :::\nhttps://www.google.com/search?source\u003dhp\u0026ei\u003dU0BFXcX7BNilwgPUppvgCA\u0026q\u003dapple\u0026oq\u003dapple\u0026gs_l\u003dpsy-ab.12..0l10.2384.2415..3878...0.0..1.205.757.0j3j1......0....1..gws-wiz.....0.NLWVkWKdND0\u0026ved\u003d0ahUKEwiF8Y6Gn-bjAhXYknAKHVTTBowQ4dUDCAU\n"
+            ],
             "result": {
-              "duration": 3148986751,
+              "duration": 4885182729,
               "status": "passed"
             },
             "line": 7,
-            "name": "get \"chromedriver.exe\" for test",
+            "name": "type search text in text box and \"apple\"",
             "match": {
               "arguments": [
                 {
-                  "val": "chromedriver.exe",
-                  "offset": 5
+                  "val": "apple",
+                  "offset": 34
                 }
               ],
-              "location": "FirstSeleniumPrg.getDriver(String)"
+              "location": "StepDefinition.googleSearch(String)"
             },
             "keyword": "Then "
           },
           {
+            "output": [
+              "::: Search Text :::\napple"
+            ],
             "result": {
-              "duration": 5968362563,
+              "duration": 1407716694,
               "status": "passed"
             },
             "line": 8,
-            "name": "launch driver with \"https://www.google.com/\"",
+            "name": "verify the search result \"apple\"",
             "match": {
               "arguments": [
                 {
-                  "val": "https://www.google.com/",
-                  "offset": 20
+                  "val": "apple",
+                  "offset": 26
                 }
               ],
-              "location": "FirstSeleniumPrg.launchURL(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "output": [
-              "CurrentUrl : https://www.google.com/"
-            ],
-            "result": {
-              "duration": 371308377,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "check \"https://www.google.com/\" is launched",
-            "match": {
-              "arguments": [
-                {
-                  "val": "https://www.google.com/",
-                  "offset": 7
-                }
-              ],
-              "location": "FirstSeleniumPrg.checkURL(String)"
+              "location": "StepDefinition.verifySearchResult(String)"
             },
             "keyword": "When "
           }
         ],
         "tags": [
           {
-            "name": "@testFirstSeleniumCode"
+            "name": "@testPOM"
           },
           {
-            "name": "@somkeTestDriver"
+            "name": "@googleTest"
           }
         ]
       },
@@ -124,22 +123,31 @@
         "before": [
           {
             "result": {
-              "duration": 243760,
+              "duration": 107768,
               "status": "passed"
             },
             "match": {
               "location": "FirstSeleniumPrg.startTest(Scenario)"
             }
+          },
+          {
+            "result": {
+              "duration": 57733,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinition.startTest(Scenario)"
+            }
           }
         ],
-        "line": 14,
-        "name": "test different webdriver with url",
+        "line": 13,
+        "name": "run selenium test for google in POM",
         "description": "",
-        "id": "smoke-test-webdriver-in-selenium-bdd-cucumber-java-framework-code;test-different-webdriver-with-url;;3",
+        "id": "selenium-test-using-page-object-model;run-selenium-test-for-google-in-pom;;3",
         "after": [
           {
             "result": {
-              "duration": 3595816999,
+              "duration": 3916000922,
               "status": "passed"
             },
             "match": {
@@ -152,101 +160,91 @@
         "steps": [
           {
             "output": [
-              "Full webdriver project path : ./src/test/resources/driver/geckodriver.exe"
+              "firefox:::  created",
+              "::: navigated url :::\nhttps://www.google.com/"
             ],
             "result": {
-              "duration": 627360,
+              "duration": 7204272740,
               "status": "passed"
             },
             "line": 6,
-            "name": "\"geckodriver.exe\" available in the project path",
+            "name": "get webdriver for \"firefox\" with \"https://www.google.com/\"",
             "match": {
               "arguments": [
                 {
-                  "val": "geckodriver.exe",
-                  "offset": 1
+                  "val": "firefox",
+                  "offset": 19
+                },
+                {
+                  "val": "https://www.google.com/",
+                  "offset": 34
                 }
               ],
-              "location": "FirstSeleniumPrg.checkDriverFile(String)"
+              "location": "StepDefinition.getWebdriver(String,String)"
             },
             "keyword": "Given "
           },
           {
+            "output": [
+              "::: navigated url :::\nhttps://www.google.com/search?source\u003dhp\u0026ei\u003dY0BFXYSdH4-8vASw-6fYDA\u0026q\u003dselenium\u0026oq\u003dselenium\u0026gs_l\u003dpsy-ab.12..0l8j0i131j0.961.1019..2213...0.0..0.213.737.0j4j1......0....1..gws-wiz.....0.vSOrmTdTX_4\u0026ved\u003d0ahUKEwjE2vmNn-bjAhUPHo8KHbD9CcsQ4dUDCAU\n"
+            ],
             "result": {
-              "duration": 5014031147,
+              "duration": 4179264604,
               "status": "passed"
             },
             "line": 7,
-            "name": "get \"geckodriver.exe\" for test",
+            "name": "type search text in text box and \"selenium\"",
             "match": {
               "arguments": [
                 {
-                  "val": "geckodriver.exe",
-                  "offset": 5
+                  "val": "selenium",
+                  "offset": 34
                 }
               ],
-              "location": "FirstSeleniumPrg.getDriver(String)"
+              "location": "StepDefinition.googleSearch(String)"
             },
             "keyword": "Then "
           },
           {
+            "output": [
+              "::: Search Text :::\nselenium"
+            ],
             "result": {
-              "duration": 5497469390,
+              "duration": 1316832445,
               "status": "passed"
             },
             "line": 8,
-            "name": "launch driver with \"https://convertcase.net/\"",
+            "name": "verify the search result \"selenium\"",
             "match": {
               "arguments": [
                 {
-                  "val": "https://convertcase.net/",
-                  "offset": 20
+                  "val": "selenium",
+                  "offset": 26
                 }
               ],
-              "location": "FirstSeleniumPrg.launchURL(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "output": [
-              "CurrentUrl : https://convertcase.net/"
-            ],
-            "result": {
-              "duration": 108446101,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "check \"https://convertcase.net/\" is launched",
-            "match": {
-              "arguments": [
-                {
-                  "val": "https://convertcase.net/",
-                  "offset": 7
-                }
-              ],
-              "location": "FirstSeleniumPrg.checkURL(String)"
+              "location": "StepDefinition.verifySearchResult(String)"
             },
             "keyword": "When "
           }
         ],
         "tags": [
           {
-            "name": "@testFirstSeleniumCode"
+            "name": "@testPOM"
           },
           {
-            "name": "@somkeTestDriver"
+            "name": "@googleTest"
           }
         ]
       }
     ],
-    "name": "Smoke test webdriver in Selenium BDD cucumber java framework code",
+    "name": "selenium test using page object model",
     "description": "",
-    "id": "smoke-test-webdriver-in-selenium-bdd-cucumber-java-framework-code",
+    "id": "selenium-test-using-page-object-model",
     "keyword": "Feature",
-    "uri": ".\\src\\test\\feature\\bdd\\slm\\java\\webtest\\FirstSelenium.feature",
+    "uri": ".\\src\\test\\feature\\bdd\\slm\\java\\webtest\\GoogleTest.feature",
     "tags": [
       {
-        "name": "@testFirstSeleniumCode",
+        "name": "@testPOM",
         "type": "Tag",
         "location": {
           "line": 1,
