@@ -12,5 +12,6 @@ public class ApplicationConstants {
 	public final static String IE_BROWSER = "ie";
 	public final static String FIREFOX_PROPERTY = "webdriver.gecko.driver";
 	public final static String SCREEN_SHOT_PATH = "./src/test/resources/screenShot/";
+	public final static String SECRET_KEY = "XnUVMA.TU;T7Avbv";
 
 }

@@ -97,7 +97,7 @@ formatter.step({
 formatter.match({
   "location": "StepDefinition.googleSearch(String)"
 });
-formatter.write("::: navigated url :::\nhttps://www.google.com/search?source\u003dhp\u0026ei\u003dU0BFXcX7BNilwgPUppvgCA\u0026q\u003dapple\u0026oq\u003dapple\u0026gs_l\u003dpsy-ab.12..0l10.2384.2415..3878...0.0..1.205.757.0j3j1......0....1..gws-wiz.....0.NLWVkWKdND0\u0026ved\u003d0ahUKEwiF8Y6Gn-bjAhXYknAKHVTTBowQ4dUDCAU\n");
+formatter.write("::: navigated url :::\nhttps://www.google.com/search?source\u003dhp\u0026ei\u003dznlGXdavF4O5rQGX_6zIBA\u0026q\u003dapple\u0026oq\u003dapple\u0026gs_l\u003dpsy-ab.12..0l10.2833.2875..4315...0.0..1.216.792.0j4j1......0....1..gws-wiz.....0..0i131.lOlGZnSNH44\u0026ved\u003d0ahUKEwjWzvWAyujjAhWDXCsKHZc_C0kQ4dUDCAU\n");
 formatter.result({
   "status": "passed"
 });
@@ -153,7 +153,7 @@ formatter.step({
 formatter.match({
   "location": "StepDefinition.googleSearch(String)"
 });
-formatter.write("::: navigated url :::\nhttps://www.google.com/search?source\u003dhp\u0026ei\u003dY0BFXYSdH4-8vASw-6fYDA\u0026q\u003dselenium\u0026oq\u003dselenium\u0026gs_l\u003dpsy-ab.12..0l8j0i131j0.961.1019..2213...0.0..0.213.737.0j4j1......0....1..gws-wiz.....0.vSOrmTdTX_4\u0026ved\u003d0ahUKEwjE2vmNn-bjAhUPHo8KHbD9CcsQ4dUDCAU\n");
+formatter.write("::: navigated url :::\nhttps://www.google.com/search?source\u003dhp\u0026ei\u003d4HlGXa6aIZC8rQHal4GgBQ\u0026q\u003dselenium\u0026oq\u003dselenium\u0026gs_l\u003dpsy-ab.12..0l10.882.938..2119...0.0..0.194.679.0j4......0....1..gws-wiz.....0.kEZs38WOWEY\u0026ved\u003d0ahUKEwiuisqJyujjAhUQXisKHdpLAFQQ4dUDCAU\n");
 formatter.result({
   "status": "passed"
 });
